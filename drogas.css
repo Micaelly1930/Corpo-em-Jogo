@@ -1,0 +1,654 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f8fb;
+    color: #3d465e;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.header {
+    width: 100%;
+    height: 76px;
+
+    background: #284f78;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 32px;
+
+    border-bottom: 1px solid #e6e3ef;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    list-style: none;
+}
+
+
+/* LINKS */
+
+.menu a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+
+/* EFEITO DO MOUSE */
+
+.menu a:hover {
+    color: #b9d7f0;
+}
+
+
+/* =========================
+   CAPA
+========================= */
+
+ .hero{
+    height: calc(100vh - 76px); 
+    width: 100%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background: #4c4d52;
+    
+    /* Centraliza todo o conteúdo interno da capa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.hero > img {
+    /* Faz a imagem ocupar 100% da largura e altura do bloco */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(35, 29, 70, 0.4) 0%, rgba(28, 33, 58, 0.85) 100%);
+    z-index: 1;
+}
+/* Texto da capa */
+
+.hero-conteudo {
+     position: relative;
+    z-index: 2;
+    /* Alinha os textos e o botão no centro */
+    text-align: center; 
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-conteudo span {
+   font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #ffffff 
+}
+
+.hero h1 {
+    font-size: clamp(45px, 10vw, 120px); /* Ajustado para não quebrar em telas menores */
+    line-height: 0.95;
+    letter-spacing: 7px;
+    font-weight: 900;
+    margin-top: 15px;
+    color: #ffffff !important;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px auto 0 auto; /* Centraliza o bloco de parágrafo */
+    max-width: 550px;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h2 {
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    font-weight: 900;
+}
+
+.linha {
+    width: 58px;
+    height: 4px;
+
+    background: #252933;
+
+    margin: 16px 0 24px;
+}
+
+.central {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================
+   O QUE SÃO DROGAS
+========================= */
+
+.sobre {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 105px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.texto p {
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    color: #000000;
+
+    margin-bottom: 12px;
+}
+
+.imagem {
+    padding: 12px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px rgba(43, 37, 77, 0.12);
+}
+
+.imagem img {
+    width: 100%;
+
+    height: 390px;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   TIPOS
+========================= */
+
+.tipos {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 20px 0 110px;
+
+    position: relative;
+}
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 48px;
+}
+
+.titulo-secao h2 {
+    font-size: 32px;
+}
+
+
+/* Área principal */
+
+.conteudo-tipos {
+    width: 72%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 34px;
+}
+
+
+/* Cada droga */
+
+.droga {
+    display: grid;
+
+    grid-template-columns: 190px 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+
+    background: white;
+
+    padding: 12px;
+
+    border: 1px solid #ebe9f1;
+
+    min-height: 190px;
+}
+
+
+/* Inverte imagem e texto */
+
+.droga.invertida {
+    grid-template-columns: 1fr 190px;
+}
+
+
+/* Imagens */
+
+.imagem-droga {
+    height: 165px;
+
+    overflow: hidden;
+}
+
+.imagem-droga img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Texto */
+
+.texto-droga {
+    padding: 8px 15px;
+}
+
+.texto-droga h3 {
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+    color: #14255e;
+
+    margin-bottom: 12px;
+}
+
+.texto-droga p {
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    color: #000000;
+}
+
+
+/* =========================
+   ESTIMULANTES
+========================= */
+
+.estimulantes {
+    position: absolute;
+
+    right: 0;
+
+    top: 95px;
+
+    width: 25%;
+
+    background: white;
+
+    padding: 24px;
+
+    border-left: 5px solid #496789;
+
+    box-shadow:
+        0 10px 35px rgba(43, 37, 77, 0.08);
+}
+
+.estimulantes h2 {
+    font-size: 19px;
+}
+
+.estimulantes img {
+    width: 100%;
+
+    height: 160px;
+
+    object-fit: cover;
+}
+
+.estimulantes p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #77748a;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   CLASSIFICAÇÃO
+========================= */
+
+.classificacao {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 100px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.classificacao h2 {
+    font-size: 30px;
+}
+
+
+/* Caixas */
+
+.caixa {
+    background: white;
+
+    border-left: 5px solid #477aaa;
+
+    padding: 23px;
+
+    margin-top: 22px;
+
+    box-shadow:
+        0 7px 25px rgba(43, 37, 77, 0.06);
+}
+
+.caixa h3 {
+    font-size: 16px;
+
+    color: #1c3780;
+
+    margin-bottom: 9px;
+}
+
+.caixa p {
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #000000;
+}
+
+
+/* Imagem */
+
+.imagem-classificacao {
+    padding: 10px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px rgba(43, 37, 77, 0.1);
+}
+
+.imagem-classificacao img {
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   PREVENÇÃO
+========================= */
+
+.prevencao {
+    background: #2a485c;
+
+    color: white;
+
+    padding: 85px 8%;
+
+    text-align: center;
+}
+
+.prevencao span {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #a2dbe5;
+
+    font-weight: 800;
+}
+
+.prevencao h2 {
+    font-size: clamp(32px, 5vw, 55px);
+
+    margin: 12px auto 18px;
+
+    max-width: 850px;
+}
+
+.prevencao p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #ddd8ea;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #458aaa;
+
+    color: white;
+
+    padding: 30px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+
+footer strong {
+    letter-spacing: 2px;
+}
+
+footer span {
+    color: #f3f2f8;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        margin: 0;
+
+        height: 560px;
+    }
+
+    .sobre,
+    .classificacao {
+
+        grid-template-columns: 1fr;
+
+        width: 88%;
+
+        gap: 45px;
+    }
+
+    .tipos {
+        width: 88%;
+    }
+
+    .conteudo-tipos {
+        width: 100%;
+    }
+
+    .estimulantes {
+        position: static;
+
+        width: 100%;
+
+        margin-top: 40px;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-conteudo {
+        left: 8%;
+    }
+
+    .hero h1 {
+        font-size: 68px;
+
+        letter-spacing: 3px;
+    }
+
+    .sobre {
+        padding: 70px 0;
+    }
+
+    .droga,
+    .droga.invertida {
+
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-droga {
+        height: 210px;
+    }
+
+    .classificacao {
+        padding: 70px 0;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
+
